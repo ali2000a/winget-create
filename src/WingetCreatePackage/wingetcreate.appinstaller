@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2021"
+    Version="1.0.0.0"
+    Uri="https://aka.ms/wingetcreate/latest/appinstaller" >
+
+    <MainBundle
+        Name="Microsoft.WindowsPackageManagerManifestCreator"
+        Publisher="CN=Microsoft Corporation"
+        Version="0.2.4.1"
+        Uri="https://aka.ms/wingetcreate/latest/msixbundle" />
+
+    <Dependencies>
+        <Package 
+            Name="Microsoft.VCLibs.140.00.UWPDesktop" 
+            Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" 
+            Version="14.0.25426.0" ProcessorArchitecture="x64" Uri="https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx" />
+    </Dependencies>
+	
+    <UpdateSettings>
+        <OnLaunch 
+            HoursBetweenUpdateChecks="24"
+            UpdateBlocksActivation="true"
+            ShowPrompt="true" />
+        <AutomaticBackgroundTask />
+        <ForceUpdateFromAnyVersion>false</ForceUpdateFromAnyVersion>
+    </UpdateSettings>
+
+</AppInstaller>
